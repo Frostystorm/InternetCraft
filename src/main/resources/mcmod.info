@@ -1,0 +1,16 @@
+[
+{
+  "modid": "internetcraft",
+  "name": "Internet Craft",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["FrostyStorm"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

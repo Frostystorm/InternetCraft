@@ -1,0 +1,10 @@
+*.classpath
+*.xml
+eclipse/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps
+eclipse/
+bin/
+*.bat
+gradlew
+.settings/
+.project
+.gradle/
