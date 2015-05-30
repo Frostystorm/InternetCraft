@@ -19,12 +19,16 @@ public class Items
 
 	public final static Block doge = new BlockInternetCraft(Material.ground)
     .setHardness(0.5F).setStepSound(Block.soundTypeMetal)
-    .setUnlocalizedName("doge_block").setCreativeTab(CreativeTabs.tabBlock);
+    .setUnlocalizedName("doge_block");
 
 	public static void registerRenderer(Item item, String name)
 	{
 		ModelBakery.addVariantName(item, "internetcraft:" + name);
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation("internetcraft:" + name, "inventory"));
+	}
+	
+	public static void registerRendererBlock(Block block, String name)
+	{
 	}
 
 	public static void init()
@@ -37,6 +41,7 @@ public class Items
 	public static void registerModels()
 	{
 		registerRenderer(bacon, "bacon");
+		registerRendererBlock(doge, "doge_block");
 	}
 	
 }
