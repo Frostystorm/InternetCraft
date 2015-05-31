@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class Blocks
 {
-	public final static Block doge_block = new BlockInternetCraft(Material.ground)
+	public final static Block doge_block = new DogeBlock(Material.ground)
 	.setHardness(0.5F).setStepSound(Block.soundTypeMetal)
 	.setUnlocalizedName("doge_block");
 	
