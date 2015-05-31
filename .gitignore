@@ -8,3 +8,7 @@ gradlew
 .settings/
 .project
 .gradle/
+*.iml
+*.iws
+*.ipr
+out/

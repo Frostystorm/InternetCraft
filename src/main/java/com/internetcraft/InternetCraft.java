@@ -1,5 +1,6 @@
 package com.internetcraft;
 
+import com.internetcraft.Block.Blocks;
 import com.internetcraft.Item.Items;
 import com.internetcraft.Reference.Reference;
 import net.minecraftforge.fml.common.Mod;
@@ -16,6 +17,7 @@ public class InternetCraft
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		Items.init();
+		Blocks.init();
 	}
 
 	@Mod.EventHandler
@@ -23,5 +25,6 @@ public class InternetCraft
 	public void preInit(FMLInitializationEvent event)
 	{
 		Items.registerModels();
+		Blocks.registerModels();
 	}
 }
