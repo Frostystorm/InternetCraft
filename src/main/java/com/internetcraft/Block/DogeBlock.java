@@ -2,6 +2,8 @@ package com.internetcraft.Block;
 
 import com.internetcraft.Block.Blocks;
 
+import com.internetcraft.Reference.Reference;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -11,10 +13,13 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
-public class DogeBlock extends BlockInternetCraft {
+public class DogeBlock extends Block {
 
-	public DogeBlock(Material material) {
-		super(material);
+	public DogeBlock() {
+		super(Material.ground);
+		setHardness(0.5F);
+		setStepSound(Block.soundTypeMetal);
+		setUnlocalizedName("doge_block");
 	}
 	
 	@Override
@@ -25,4 +30,11 @@ public class DogeBlock extends BlockInternetCraft {
 		return false;
 	}
 
+	@Override
+	public DogeBlock setUnlocalizedName(String unlocalizedName)
+	{
+		super.setUnlocalizedName(Reference.PREFIX + unlocalizedName);
+
+		return this;
+	}
 }

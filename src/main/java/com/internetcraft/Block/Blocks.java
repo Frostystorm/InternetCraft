@@ -8,17 +8,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class Blocks
 {
-	public final static Block doge_block = new DogeBlock(Material.ground)
-	.setHardness(0.5F).setStepSound(Block.soundTypeMetal)
-	.setUnlocalizedName("doge_block");
-	
-	public final static Block bacon_block = new BlockInternetCraft(Material.ground)
-	.setHardness(0.5F).setStepSound(Block.soundTypeMetal)
-	.setUnlocalizedName("bacon_block");
-
-	public final static Block snoop_block = new BlockInternetCraft(Material.ground)
-	.setHardness(0.5F).setStepSound(Block.soundTypeMetal)
-	.setUnlocalizedName("snoop_block");
+	public final static Block doge_block = new DogeBlock();
+	public final static Block bacon_block = new BlockInternetCraft();
+	public final static Block snoop_block = new BlockInternetCraft();
 
 	public static void init()
 	{

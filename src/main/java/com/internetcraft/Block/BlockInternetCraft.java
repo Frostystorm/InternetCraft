@@ -7,9 +7,12 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockInternetCraft extends Block{
 
-	public BlockInternetCraft(Material material) {
-		super(material);
+	public BlockInternetCraft() {
+		super(Material.ground);
 		setCreativeTab(CreativeTabs.tabBlock);
+		setHardness(0.5F);
+		setStepSound(Block.soundTypeMetal);
+		setUnlocalizedName("snoop_block");
 	}
 
 	@Override
