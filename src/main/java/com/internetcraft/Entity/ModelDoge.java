@@ -13,8 +13,10 @@ package com.internetcraft.Entity;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.client.model.ModelWolf;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.passive.EntityWolf;
 import net.minecraft.util.MathHelper;
 
 public class ModelDoge extends ModelBase
@@ -64,12 +66,14 @@ public class ModelDoge extends ModelBase
 	  this.Tail.setRotationPoint(-1F, 12F, 8F);
 
 	  this.Ear1 = new ModelRenderer(this, 58, 0);
+	  this.WolfHead.addChild(this.Ear1);
 	  this.Ear1.addBox(-3F, -5F, 0F, 2, 2, 1);
-	  this.Ear1.setRotationPoint(-1F, 13.5F, -2F);
+	  this.Ear1.setRotationPoint(-1F - -1F, 13.5F - 13.5F, -2F - -1.9F);
 
 	  this.Ear2 = new ModelRenderer(this, 58, 3);
+	  this.WolfHead.addChild(this.Ear2);
 	  this.Ear2.addBox(1F, -5F, 0F, 2, 2, 1);
-	  this.Ear2.setRotationPoint(-1F, 13.5F, -2F);
+	  this.Ear2.setRotationPoint(-1F - -1F, 13.5F - 13.5F, -2F - -1.9F);
   }
 
 	public void render(Entity entity, float time, float limbSwing, float p_78088_4_, float headYRot, float headXRot, float yTrans)
@@ -91,8 +95,6 @@ public class ModelDoge extends ModelBase
 			this.Leg3.render(yTrans);
 			this.Leg4.render(yTrans);
 			this.Tail.render(yTrans);
-			this.Ear1.render(yTrans);
-			this.Ear2.render(yTrans);
 			GlStateManager.popMatrix();
 		}
 		else
@@ -104,8 +106,6 @@ public class ModelDoge extends ModelBase
 			this.Leg3.render(yTrans);
 			this.Leg4.render(yTrans);
 			this.Tail.render(yTrans);
-			this.Ear1.render(yTrans);
-			this.Ear2.render(yTrans);
 		}
 	}
 
