@@ -16,16 +16,21 @@ public class Blocks
 	.setHardness(0.5F).setStepSound(Block.soundTypeMetal)
 	.setUnlocalizedName("bacon_block");
 
+	public final static Block snoop_block = new BlockInternetCraft(Material.ground)
+	.setHardness(0.5F).setStepSound(Block.soundTypeMetal)
+	.setUnlocalizedName("snoop_block");
+
 	public static void init()
 	{
 		GameRegistry.registerBlock(doge_block, "doge_block");
 		GameRegistry.registerBlock(bacon_block, "bacon_block");
+		GameRegistry.registerBlock(snoop_block, "snoop_block");
 	}
 
 	public static void registerModels()
 	{
 		Items.registerRenderer(GameRegistry.findItem(Reference.MODID, "doge_block"), "doge_block");
 		Items.registerRenderer(GameRegistry.findItem(Reference.MODID, "bacon_block"), "bacon_block");
-
+		Items.registerRenderer(GameRegistry.findItem(Reference.MODID, "snoop_block"), "snoop_block");
 	}
 }
