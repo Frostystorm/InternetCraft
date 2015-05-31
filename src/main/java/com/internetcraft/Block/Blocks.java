@@ -10,7 +10,7 @@ public class Blocks
 {
 	public final static Block doge_block = new DogeBlock();
 	public final static Block bacon_block = new BlockInternetCraft();
-	public final static Block snoop_block = new BlockInternetCraft();
+	public final static Block snoop_block = new SnoopBlock();
 
 	public static void init()
 	{
