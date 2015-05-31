@@ -3,6 +3,7 @@ package com.internetcraft;
 import com.internetcraft.Block.Blocks;
 import com.internetcraft.Item.Items;
 import com.internetcraft.Reference.Reference;
+import com.internetcraft.Util.Recipes;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -18,6 +19,7 @@ public class InternetCraft
 	{
 		Items.init();
 		Blocks.init();
+		Recipes.register();
 	}
 
 	@Mod.EventHandler
