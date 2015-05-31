@@ -1,5 +1,6 @@
 package com.internetcraft.Entity;
 
+import com.internetcraft.Reference.Reference;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -8,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderDoge extends RenderLiving
 {
-	private static final ResourceLocation dogeTextures = new ResourceLocation("textures/entity/doge/doge.png");
+	private static final ResourceLocation dogeTextures = new ResourceLocation(Reference.MODID + ":textures/entity/doge/doge.png");
 
 	public RenderDoge(RenderManager rendermanager, ModelBase model, float shadowsize)
 	{

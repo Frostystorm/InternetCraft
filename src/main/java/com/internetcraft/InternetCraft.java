@@ -19,9 +19,13 @@ public class InternetCraft
 	@SidedProxy(clientSide=Reference.CLIENT_PROXY_CLASS, serverSide=Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 
+	@Mod.Instance(Reference.MODID)
+	public static InternetCraft instance;
+
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		InternetCraft.instance = this;
 		proxy.preInit();
 	}
 
@@ -29,6 +33,7 @@ public class InternetCraft
 	public void Init(FMLInitializationEvent event)
 	{
 		proxy.Init();
+		proxy.registerRenderers();
 	}
 
 	@Mod.EventHandler

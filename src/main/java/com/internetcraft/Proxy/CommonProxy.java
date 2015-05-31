@@ -1,6 +1,7 @@
 package com.internetcraft.Proxy;
 
 import com.internetcraft.Block.Blocks;
+import com.internetcraft.Entity.Entities;
 import com.internetcraft.Item.Items;
 import com.internetcraft.Util.Recipes;
 
@@ -11,6 +12,11 @@ public class CommonProxy
 		Items.init();
 		Blocks.init();
 		Recipes.register();
+		Entities.init();
+	}
+
+	public void registerRenderers() {
+
 	}
 
 	public void Init()

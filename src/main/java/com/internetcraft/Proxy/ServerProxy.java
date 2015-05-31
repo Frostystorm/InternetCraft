@@ -10,6 +10,9 @@ public class ServerProxy extends CommonProxy
 		super.preInit();
 	}
 
+	public void registerRenderers() {
+	}
+
 	public void Init()
 	{
 		super.Init();

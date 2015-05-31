@@ -13,7 +13,6 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathNavigateGround;
@@ -30,8 +29,10 @@ public class EntityDoge extends EntityAnimal
 		((PathNavigateGround) this.getNavigator()).func_179690_a(true);
 		this.tasks.addTask(0, new EntityAISwimming(this));
 		this.tasks.addTask(1, new EntityAIPanic(this, 2.0D));
-		this.tasks.addTask(2, new EntityAIMate(this, 1.0D));
-		this.tasks.addTask(3, new EntityAITempt(this, 1.25D, com.internetcraft.Item.Items.bacon, false));
+		// No mating for now
+		// this.tasks.addTask(2, new EntityAIMate(this, 1.0D));
+		//TODO; Doges follow doritos
+		// this.tasks.addTask(3, new EntityAITempt(this, 1.25D, com.internetcraft.Item.Items.bacon, false));
 		this.tasks.addTask(4, new EntityAIFollowParent(this, 1.25D));
 		this.tasks.addTask(5, new EntityAIWander(this, 1.0D));
 		this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
@@ -42,12 +43,7 @@ public class EntityDoge extends EntityAnimal
 	{
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(10.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.3D);
-	}
-
-	public boolean isBreedingItem(ItemStack itemstack)
-	{
-		return itemstack == null ? false :itemstack.getItem() == com.internetcraft.Item.Items.bacon;
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.25D);
 	}
 
 	public boolean canBreatheUnderwater()
@@ -64,25 +60,17 @@ public class EntityDoge extends EntityAnimal
 	{
 		super.onLivingUpdate();
 	}
-	/**
-	 * Returns the sound this mob makes while it's alive.
-	 */
+
 	protected String getLivingSound()
 	{
-		return "mob.wolf.idle";
+		return "mob.rabbit.idle";
 	}
 
-	/**
-	 * Returns the sound this mob makes when it is hurt.
-	 */
 	protected String getHurtSound()
 	{
 		return "mob.wolf.hurt";
 	}
 
-	/**
-	 * Returns the sound this mob makes on death.
-	 */
 	protected String getDeathSound()
 	{
 		return "mob.wolf.hurt";
@@ -93,9 +81,6 @@ public class EntityDoge extends EntityAnimal
 		this.playSound("mob.cow.step", 0.15F, 1.0F);
 	}
 
-	/**
-	 * Returns the volume for the sounds this mob makes.
-	 */
 	protected float getSoundVolume()
 	{
 		return 0.4F;
@@ -106,17 +91,11 @@ public class EntityDoge extends EntityAnimal
 		return com.internetcraft.Item.Items.bacon;
 	}
 
-	/**
-	 * Drop 0-2 items of this living's type
-	 */
 	protected void dropFewItems(boolean recentlyhit, int modifier)
 	{
 		this.dropItem(com.internetcraft.Item.Items.bacon, 1);
 	}
 
-	/**
-	 * Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
-	 */
 	public boolean interact(EntityPlayer player)
 	{
 		return super.interact(player);
