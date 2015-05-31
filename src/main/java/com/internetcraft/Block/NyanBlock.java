@@ -22,6 +22,7 @@ public class NyanBlock extends Block {
 		setStepSound(Block.soundTypeMetal);
 		setUnlocalizedName("nyan_block");
 		setCreativeTab(CreativeTabs.tabBlock);
+		setLightLevel((float) 0.75);
 	}
 	
 	@Override
