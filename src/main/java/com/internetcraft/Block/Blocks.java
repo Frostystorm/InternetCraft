@@ -11,12 +11,16 @@ public class Blocks
 	public final static Block doge_block = new DogeBlock();
 	public final static Block bacon_block = new BlockInternetCraft();
 	public final static Block snoop_block = new SnoopBlock();
+	public final static Block nyan_block = new NyanBlock();
+
 
 	public static void init()
 	{
 		GameRegistry.registerBlock(doge_block, "doge_block");
 		GameRegistry.registerBlock(bacon_block, "bacon_block");
 		GameRegistry.registerBlock(snoop_block, "snoop_block");
+		GameRegistry.registerBlock(nyan_block, "nyan_block");
+
 	}
 
 	public static void registerModels()
@@ -24,5 +28,7 @@ public class Blocks
 		Items.registerRenderer(GameRegistry.findItem(Reference.MODID, "doge_block"), "doge_block");
 		Items.registerRenderer(GameRegistry.findItem(Reference.MODID, "bacon_block"), "bacon_block");
 		Items.registerRenderer(GameRegistry.findItem(Reference.MODID, "snoop_block"), "snoop_block");
+		Items.registerRenderer(GameRegistry.findItem(Reference.MODID, "nyan_block"), "nyan_block");
+
 	}
 }

@@ -6,6 +6,7 @@ import com.internetcraft.Reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -20,6 +21,7 @@ public class SnoopBlock extends Block {
 		setHardness(0.5F);
 		setStepSound(Block.soundTypeMetal);
 		setUnlocalizedName("snoop_block");
+		setCreativeTab(CreativeTabs.tabBlock);
 	}
 	
 	@Override

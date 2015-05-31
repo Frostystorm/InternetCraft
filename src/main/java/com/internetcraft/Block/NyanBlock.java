@@ -14,29 +14,29 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
-public class DogeBlock extends Block {
+public class NyanBlock extends Block {
 
-	public DogeBlock() {
+	public NyanBlock() {
 		super(Material.ground);
 		setHardness(0.5F);
 		setStepSound(Block.soundTypeMetal);
-		setUnlocalizedName("doge_block");
+		setUnlocalizedName("nyan_block");
 		setCreativeTab(CreativeTabs.tabBlock);
 	}
 	
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ){
 		worldIn.setBlockToAir(pos);
-		playerIn.addPotionEffect(new PotionEffect(Potion.invisibility.getId(), 2400));
-		playerIn.addPotionEffect(new PotionEffect(Potion.nightVision.getId(), 2400));
+		playerIn.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 2400, 2));
 		return false;
 	}
-
+	
 	@Override
-	public DogeBlock setUnlocalizedName(String unlocalizedName)
+	public NyanBlock setUnlocalizedName(String unlocalizedName)
 	{
 		super.setUnlocalizedName(Reference.PREFIX + unlocalizedName);
 
 		return this;
 	}
+
 }
