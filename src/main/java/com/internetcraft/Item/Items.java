@@ -10,6 +10,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class Items
 {
 	public static final FoodInternetCraft bacon = new FoodInternetCraft(6, 2, false).setUnlocalizedName("bacon");
+	public static final FoodInternetCraft dorito = new FoodInternetCraft(12, 4, false).setUnlocalizedName("dorito");
+
 
 	public static void registerRenderer(Item item, String name)
 	{
@@ -20,12 +22,15 @@ public class Items
 	public static void init()
 	{
 		GameRegistry.registerItem(bacon, "bacon");
+		GameRegistry.registerItem(dorito, "dorito");
 
 	}
 
 	public static void registerModels()
 	{
 		registerRenderer(bacon, "bacon");
+		registerRenderer(dorito, "dorito");
+
 	}
 	
 }
