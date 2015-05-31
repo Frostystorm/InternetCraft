@@ -43,7 +43,7 @@ public class EntityDoge extends EntityAnimal
 	{
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(10.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.25D);
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.6D);
 	}
 
 	public boolean canBreatheUnderwater()
