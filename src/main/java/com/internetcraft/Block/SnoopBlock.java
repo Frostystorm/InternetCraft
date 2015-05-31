@@ -3,6 +3,7 @@ package com.internetcraft.Block;
 import com.internetcraft.Block.Blocks;
 import com.internetcraft.Reference.Reference;
 
+import com.internetcraft.Util.InternetCraftCreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -21,7 +22,7 @@ public class SnoopBlock extends Block {
 		setHardness(0.5F);
 		setStepSound(Block.soundTypeMetal);
 		setUnlocalizedName("snoop_block");
-		setCreativeTab(CreativeTabs.tabBlock);
+		setCreativeTab(InternetCraftCreativeTabs.INTERNETCRAFT);
 	}
 	
 	@Override

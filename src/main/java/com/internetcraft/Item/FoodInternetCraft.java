@@ -1,14 +1,15 @@
-package com.internetcraft.Food;
+package com.internetcraft.Item;
 
 import com.internetcraft.Reference.Reference;
 
+import com.internetcraft.Util.InternetCraftCreativeTabs;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemFood;
 
 public class FoodInternetCraft extends ItemFood{
-	public FoodInternetCraft(CreativeTabs tab, int amount, int saturation, boolean isWolfFood){
+	public FoodInternetCraft(int amount, int saturation, boolean isWolfFood){
 		super(amount, saturation, isWolfFood);
-		setCreativeTab(tab); 
+		setCreativeTab(InternetCraftCreativeTabs.INTERNETCRAFT);
 	}
 	@Override
 	public FoodInternetCraft setUnlocalizedName(String unlocalizedName)
