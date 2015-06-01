@@ -6,3 +6,5 @@ tile.internetcraft.bacon_block.name=Bacon Block
 tile.internetcraft.snoop_block.name=Snoop Dogg Block
 #Creative Tabs
 itemGroup.internetcraft.internetCraftTab
+#Entities
+entity.entityDoge.name=Doge
