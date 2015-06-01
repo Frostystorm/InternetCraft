@@ -93,7 +93,13 @@ public class EntityDoge extends EntityAnimal
 
 	protected void dropFewItems(boolean recentlyhit, int modifier)
 	{
-		this.dropItem(com.internetcraft.Item.Items.bacon, 1);
+		if(Math.random()>0.8){
+			this.dropItem(com.internetcraft.Item.Items.bacon, 1);
+			this.dropItem(com.internetcraft.Item.Items.dorito, 1);
+		}
+		else{
+			this.dropItem(com.internetcraft.Item.Items.bacon, 1);
+		}
 	}
 
 	public boolean interact(EntityPlayer player)

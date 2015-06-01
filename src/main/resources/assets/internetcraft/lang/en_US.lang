@@ -1,8 +1,12 @@
 #Items
 item.internetcraft.bacon.name=Bacon
+item.internetcraft.dorito.name=Dorito
 #Blocks
 tile.internetcraft.doge_block.name=Doge Block
 tile.internetcraft.bacon_block.name=Bacon Block
 tile.internetcraft.snoop_block.name=Snoop Dogg Block
+tile.internetcraft.nyan_block.name=Nyan Cat Block
 #Creative Tabs
-itemGroup.internetcraft.internetCraftTab
+itemGroup.internetcraft.internetCraftTab=InternetCraft
+#Entities
+entity.entityDoge.name=Doge
