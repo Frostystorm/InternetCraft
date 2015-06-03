@@ -16,8 +16,7 @@ public class Entities
 	public static void init()
 	{
 		registerEntity(EntityDoge.class, "entityDoge");
-		EntityRegistry.addSpawn(EntityDoge.class, 2, 1, 1, EnumCreatureType.AMBIENT, BiomeGenBase.forest);
-		EntityRegistry.addSpawn(EntityDoge.class, 2, 1, 1, EnumCreatureType.AMBIENT, BiomeGenBase.forestHills);
+		EntityRegistry.addSpawn(EntityDoge.class, 1, 1, 1, EnumCreatureType.AMBIENT, BiomeGenBase.forest);
 	}
 	public static void registerEntity(Class entityClass, String name)
 	{
