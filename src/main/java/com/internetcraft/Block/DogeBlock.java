@@ -1,19 +1,20 @@
 package com.internetcraft.Block;
 
-import com.internetcraft.Block.Blocks;
-import com.internetcraft.Reference.Reference;
-
-import com.internetcraft.Util.InternetCraftCreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.network.play.server.S42PacketCombatEvent.Event;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
+
+import com.internetcraft.Reference.Reference;
+import com.internetcraft.Sounds.SoundHandler;
+import com.internetcraft.Util.InternetCraftCreativeTabs;
 
 public class DogeBlock extends Block {
 
@@ -30,6 +31,7 @@ public class DogeBlock extends Block {
 		worldIn.setBlockToAir(pos);
 		playerIn.addPotionEffect(new PotionEffect(Potion.invisibility.getId(), 2400));
 		playerIn.addPotionEffect(new PotionEffect(Potion.nightVision.getId(), 2400));
+
 		return false;
 	}
 

@@ -2,8 +2,9 @@ package com.internetcraft.Block;
 
 import com.internetcraft.Block.Blocks;
 import com.internetcraft.Reference.Reference;
-
+import com.internetcraft.Sounds.SoundHandler;
 import com.internetcraft.Util.InternetCraftCreativeTabs;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -28,6 +29,7 @@ public class NyanBlock extends Block {
 	
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ){
+		SoundHandler.onEntityPlay("darude", worldIn, playerIn, 50, 1);
 		worldIn.setBlockToAir(pos);
 		playerIn.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 2400, 2));
 		return false;

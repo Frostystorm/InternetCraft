@@ -12,7 +12,6 @@ public class Items
 	public static final FoodInternetCraft bacon = new FoodInternetCraft(6, 2, false).setUnlocalizedName("bacon");
 	public static final FoodInternetCraft dorito = new FoodInternetCraft(12, 4, false).setUnlocalizedName("dorito");
 
-
 	public static void registerRenderer(Item item, String name)
 	{
 		ModelBakery.addVariantName(item, "internetcraft:" + name);
