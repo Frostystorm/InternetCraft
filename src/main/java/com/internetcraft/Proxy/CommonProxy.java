@@ -13,6 +13,7 @@ public class CommonProxy
 		Blocks.init();
 		Recipes.register();
 		Entities.init();
+		Dimensions.init();
 	}
 
 	public void registerRenderers() {
