@@ -24,7 +24,7 @@ public class EntityDoge extends EntityWolf
 		this.setSize(1.0F, 1.0F);
 		((PathNavigateGround) this.getNavigator()).func_179690_a(true);
 		this.tasks.addTask(0, new EntityAISwimming(this));
-		this.tasks.addTask(1, new EntityAIAttackOnCollide(this, 0.5D, false));
+		this.tasks.addTask(1, new EntityAIAttackOnCollide(this, 0.65D, false));
 		// No mating for now
 		// this.tasks.addTask(2, new EntityAIMate(this, 1.0D));
 		this.tasks.addTask(3, new EntityAITempt(this, 1.25D, Items.dorito, false));
